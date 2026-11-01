@@ -1,0 +1,136 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", "Nunito", ui-sans-serif, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-key: var(--key);
+  --color-key-foreground: var(--key-foreground);
+  --color-key-op: var(--key-op);
+  --color-key-op-foreground: var(--key-op-foreground);
+  --color-key-fn: var(--key-fn);
+  --color-key-fn-foreground: var(--key-fn-foreground);
+  --color-sunny: var(--sunny);
+  --color-sunny-foreground: var(--sunny-foreground);
+}
+
+:root {
+  --radius: 1.25rem;
+  --background: oklch(0.965 0.02 300);
+  --foreground: oklch(0.28 0.06 295);
+  --card: oklch(0.99 0.008 300);
+  --card-foreground: oklch(0.28 0.06 295);
+  --popover: oklch(0.99 0.008 300);
+  --popover-foreground: oklch(0.28 0.06 295);
+  --primary: oklch(0.62 0.13 295);
+  --primary-foreground: oklch(0.99 0.005 300);
+  --secondary: oklch(0.93 0.035 300);
+  --secondary-foreground: oklch(0.32 0.07 295);
+  --muted: oklch(0.94 0.02 300);
+  --muted-foreground: oklch(0.52 0.05 295);
+  --accent: oklch(0.94 0.09 95);
+  --accent-foreground: oklch(0.35 0.06 80);
+  --destructive: oklch(0.6 0.2 20);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.03 300);
+  --input: oklch(0.9 0.03 300);
+  --ring: oklch(0.62 0.13 295);
+  --key: oklch(0.995 0.005 300);
+  --key-foreground: oklch(0.3 0.06 295);
+  --key-op: oklch(0.86 0.07 295);
+  --key-op-foreground: oklch(0.3 0.09 295);
+  --key-fn: oklch(0.95 0.08 95);
+  --key-fn-foreground: oklch(0.4 0.08 75);
+  --sunny: oklch(0.88 0.13 92);
+  --sunny-foreground: oklch(0.3 0.06 70);
+  --gradient-app: radial-gradient(120% 70% at 0% 0%, oklch(0.92 0.06 300) 0%, transparent 60%),
+    radial-gradient(100% 60% at 100% 100%, oklch(0.96 0.08 95) 0%, transparent 60%), var(--background);
+  --shadow-soft: 0 10px 30px -12px oklch(0.45 0.12 295 / 0.25);
+  --shadow-key: 0 3px 0 0 oklch(0.82 0.04 295), 0 6px 14px -8px oklch(0.45 0.12 295 / 0.3);
+}
+
+.dark {
+  --background: oklch(0.2 0.03 295);
+  --foreground: oklch(0.95 0.02 300);
+  --card: oklch(0.25 0.035 295);
+  --card-foreground: oklch(0.95 0.02 300);
+  --popover: oklch(0.25 0.035 295);
+  --popover-foreground: oklch(0.95 0.02 300);
+  --primary: oklch(0.78 0.11 295);
+  --primary-foreground: oklch(0.2 0.03 295);
+  --secondary: oklch(0.3 0.04 295);
+  --secondary-foreground: oklch(0.92 0.03 300);
+  --muted: oklch(0.29 0.035 295);
+  --muted-foreground: oklch(0.72 0.04 300);
+  --accent: oklch(0.4 0.07 90);
+  --accent-foreground: oklch(0.95 0.06 95);
+  --destructive: oklch(0.7 0.17 20);
+  --destructive-foreground: oklch(0.2 0.03 295);
+  --border: oklch(0.34 0.04 295);
+  --input: oklch(0.34 0.04 295);
+  --ring: oklch(0.78 0.11 295);
+  --key: oklch(0.29 0.035 295);
+  --key-foreground: oklch(0.95 0.02 300);
+  --key-op: oklch(0.42 0.09 295);
+  --key-op-foreground: oklch(0.96 0.03 300);
+  --key-fn: oklch(0.36 0.06 90);
+  --key-fn-foreground: oklch(0.93 0.08 95);
+  --sunny: oklch(0.86 0.13 92);
+  --sunny-foreground: oklch(0.25 0.05 70);
+  --gradient-app: radial-gradient(120% 70% at 0% 0%, oklch(0.3 0.07 295) 0%, transparent 60%),
+    radial-gradient(100% 60% at 100% 100%, oklch(0.3 0.05 90 / 0.6) 0%, transparent 60%), var(--background);
+  --shadow-soft: 0 10px 30px -12px oklch(0 0 0 / 0.5);
+  --shadow-key: 0 3px 0 0 oklch(0.17 0.03 295), 0 6px 14px -8px oklch(0 0 0 / 0.5);
+}
+
+@utility bg-app {
+  background: var(--gradient-app);
+}
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+@utility shadow-key {
+  box-shadow: var(--shadow-key);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+}
